@@ -5324,38 +5324,36 @@ function removeEmojis (string) {
                   
                   Object.keys(this.food).forEach(node => {
                       if (this.food[node].isFood){ //not needed
-                      let cell = this.food[node];
-                      let distance = this.calcDist(cell.x, cell.y);
-                      if (distance < bestDist) {
-                      target = cell;
-                      bestDist = distance;
-                      }
+                        let cell = this.food[node];
+                        let distance = this.calcDist(cell.x, cell.y);
+                        if (distance < bestDist) {
+                            target = cell;
+                            bestDist = distance;
+                        }
                       } //
                   });
                                  
                   Object.keys(this.cells).forEach(node => {
-                      if (this.cells[node].isVirus){
+                    if (this.cells[node].isVirus){
                       let virus = this.cells[node];
                       let distanceVirus = this.calcDist(virus.x, virus.y);
                       window.distanceVirus1=distanceVirus;
                       if (distanceVirus < 130) {
-                          //target.x=-10000;
-                      //console.log("virus is close");
-                      targetVirus = virus;
-                      console.log("Virus is close. X: " + targetVirus.x - this.playerX + " , Y: " + targetVirus.y - this.playerY );
-                      //if (targetVirus.x-legendmod.playerX<0){console.log("virus is right");}
-                      //else{console.log("virus is left");}
-                      //if (targetVirus.y-legendmod.playerY<0){console.log("virus is down");}
-                      //else{console.log("virus is up");}		
-  
-                      
-                      //targetVirus = virus;
-                      //bestDistVirus = distanceVirus;
+                        //target.x=-10000;
+                        //console.log("virus is close");
+                        targetVirus = virus;
+                        console.log("Virus is close. X: " + targetVirus.x - this.playerX + " , Y: " + targetVirus.y - this.playerY );
+                        //if (targetVirus.x-legendmod.playerX<0){console.log("virus is right");}
+                        //else{console.log("virus is left");}
+                        //if (targetVirus.y-legendmod.playerY<0){console.log("virus is down");}
+                        //else{console.log("virus is up");}		  
+                        //targetVirus = virus;
+                        //bestDistVirus = distanceVirus;
                       }
-                  }
+                    }
                   });
                   if (target!= undefined){ //not needed
-                  this.sendPosition(target);
+                    this.sendPosition(target);
                   }
               },
               'sendSpectate': function() {
@@ -5384,12 +5382,12 @@ function removeEmojis (string) {
               'sendPosition': function(cell) {
                   if (this.isSocketOpen() && this.connectionOpened && this.clientKey) {
                       if (!window.autoPlay) {
-                      var t = this["cursorX"];
-                      var e = this["cursorY"];
-                      if (!this.play && this.targeting || this.pause) {
-                          t = this.targetX;
-                          e = this.targetY;
-                      }
+                        var t = this["cursorX"];
+                        var e = this["cursorY"];
+                        if (!this.play && this.targeting || this.pause) {
+                            t = this.targetX;
+                            e = this.targetY;
+                        }
                   } else {
                       //if (typeof cell != "undefined") { //when used, autoplay not working as expected
                       var t = cell.x;
