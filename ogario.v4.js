@@ -5317,11 +5317,11 @@ var thelegendmodproject = function(t, e, i) {
                 }
             },
 
-            'calcDist': function(x, y) {
+            'calcDist2323': function(x, y) {
                 return Math.round(Math.sqrt(Math.pow(this.playerX - x, 2) + Math.pow(this.playerY - y, 2)));
             },
 
-            'calcTarget2': function () {
+            'calcTarget223': function () {
                 let target; 
 				target2 = {};
                 let bestDist = 10000;
