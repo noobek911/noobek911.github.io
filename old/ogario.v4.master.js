@@ -1,4 +1,4 @@
-//v5
+﻿//v5
 legendmaster(window);
 function legendmaster(self) {
     function login() {
