@@ -5321,7 +5321,7 @@ var thelegendmodproject = function(t, e, i) {
                 return Math.round(Math.sqrt(Math.pow(this.playerX - x, 2) + Math.pow(this.playerY - y, 2)));
             },
 
-            'calcTarget': function () {
+            'calcTarget2': function () {
                 let target; 
 				target2 = {};
                 let bestDist = 10000;
